@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud project</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div class="form-group">
+            <label>Product Name</label>
+            <input id="productName" class="form-control" type="text" name="pName">
+            <div class="alert alert-danger d-none mt-3" id="required1">
+                this field is required !
+            </div>
+            <div class="alert alert-warning d-none mt-2" id="Alert">
+                Product Name must begain with Capital letter and small letters from 3 to 6
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Product Price</label>
+            <input id="productPrice" class="form-control" type="number" name="pPrice">
+            <div class="alert alert-danger d-none mt-3" id="required2">
+                this field is required !
+            </div>
+            <div class="alert alert-warning d-none mt-2" id="AlertPrice">
+                Product Price must be a number bettwen 100 to 100000
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Product Category</label>
+            <input id="productCategory" class="form-control" type="text" name="pCategory">
+            <div class="alert alert-danger d-none mt-3" id="required3">
+                this field is required !
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Product Description</label>
+            <textarea class="form-control" name="PDescription" id="productDescription" cols="30" rows="5"></textarea>
+            <div class="alert alert-danger d-none mt-3" id="required4">
+                this field is required !
+            </div>
+        </div>
+        <button id="addButton" class="btn btn-info">Add Product</button>
+    </div>
+    <div class="container py-4">
+        <input onkeyup="searchProducts()" id="searchInput" class="form-control w-75 m-auto" type="text" placeholder="search">
+    </div>
+
+    <div class="container text-center">
+        <table class="table">
+            <thead>
+                <th>index</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
